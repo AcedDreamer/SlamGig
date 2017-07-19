@@ -1,0 +1,27 @@
+<ion-split-pane>
+<ion-menu [content]="content">
+  <ion-header>
+    <div class="header-background-image">
+      <ion-thumbnail>
+      <img [src]="params.image">
+    </ion-thumbnail>
+    <h2 item-title text-center>{{params.title}}</h2>
+    </div>
+  </ion-header>
+  <!-- Menu Main List -->
+  <ion-content>
+    <ion-list no-margin no-padding>
+      <button menuClose ion-item no-padding item-bcg item-title main-menu *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon padding-left>
+          <i class="icon {{p.icon}}"></i>
+        </ion-icon>
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" main #content swipeBackEnabled="false"></ion-nav>
+</ion-split-pane>
