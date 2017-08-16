@@ -1,7 +1,5 @@
 ## Ignore Node Module Files
 
 # Node Module files
-node_modules/
 
 # Ionic generated resources for now
-resources/
