@@ -1,25 +1,22 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.slamgig.android.ui.profile.fragments.SetEntertainerTypeFragment">
+    android:orientation="vertical">
 
-
-    <com.slamgig.android.views.EntertainerTypeCompletionView
-        android:id="@+id/select_entertainer_view"
+    <com.mycardboarddreams.autocompletebubbletext.MultiSelectEditText
+        android:id="@+id/auto_text_complete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_edit_text"
-        android:inputType="text|textNoSuggestions|textMultiLine"
-        android:focusableInTouchMode="true"
-        android:imeOptions="actionDone"/>
+        android:textColor="@android:color/black"
+        android:padding="5dp"
+        android:background="#FFEEEEEE"/>
 
-    <TextView
+    <!-- Layout where the list will go -->
+    <FrameLayout
+        android:id="@+id/auto_list_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/tokens"
-        android:layout_below="@id/select_entertainer_view"
-        android:layout_marginTop="10dp" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FF666666"/>
 
-</RelativeLayout>
+</LinearLayout>

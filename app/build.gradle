@@ -44,7 +44,7 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.0.2'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'me.relex:circleindicator:1.2.2@aar'
-    compile 'com.splitwise:tokenautocomplete:2.0.8@aar'
+    compile 'com.github.FrederickRider:AutoCompleteBubbleText:24f3797179@aar'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
 }
