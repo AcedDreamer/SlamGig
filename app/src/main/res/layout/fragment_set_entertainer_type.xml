@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.slamgig.android.ui.profile.fragments.SetEntertainerTypeFragment">
+
+
+    <com.slamgig.android.views.EntertainerTypeCompletionView
+        android:id="@+id/select_entertainer_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_edit_text"
+        android:inputType="text|textNoSuggestions|textMultiLine"
+        android:focusableInTouchMode="true"
+        android:imeOptions="actionDone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/tokens"
+        android:layout_below="@id/select_entertainer_view"
+        android:layout_marginTop="10dp" />
+
+</RelativeLayout>

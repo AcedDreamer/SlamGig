@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Slam Gig</string>
+    <string name="web_client_id">664601302077-9rtta2j6atipg12va670ue9b2b75up2n.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">342282096208219</string>
+    <string name="fb_login_protocol_scheme">fb342282096208219</string>
+
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_password_retype">Retype Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_up">Sign up</string>
+    <string name="action_sign_up_google">Sign up with Google</string>
+    <string name="action_sign_up_facebook">Sign up with Facebook</string>
+    <string name="action_sign_up_twitter">Sign up with Twitter</string>
+    <string name="action_sign_up_text">Not a member? Sign up.</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_in_short_google">Sign in with Google</string>
+    <string name="action_sign_in_short_facebook">Sign in with Facebook</string>
+    <string name="action_sign_in_short_twitter">Sign in with Twitter</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_sign_up">Sign Up</string>
+
+    <string name="user_type_question_text">Are you a Slammer or an Entertainer?</string>
+    <string name="user_type_question_additional_text">Don\'t worry, you can modify this anytime</string>
+    <string name="user_type_question_error_text">Please select your user type.</string>
+
+    <string name="title_activity_walkthrough">WalkthroughActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="auth_failed">Authentication Failed</string>
+    <string name="minimum_password">Password too short, enter minimum 6 characters!</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="title_activity_base_menu">BaseMenuActivity</string>
+    <string name="start">START</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="slammer">Slammer</string>
+    <string name="entertainer">Entertainer</string>
+</resources>

@@ -1,5 +1,9 @@
-## Ignore Node Module Files
-
-# Node Module files
-
-# Ionic generated resources for now
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.externalNativeBuild

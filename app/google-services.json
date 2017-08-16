@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "664601302077",
+    "firebase_url": "https://slamgig-b2edb.firebaseio.com",
+    "project_id": "slamgig-b2edb",
+    "storage_bucket": "slamgig-b2edb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664601302077:android:85dbfce1a65cf4c6",
+        "android_client_info": {
+          "package_name": "com.slamgig.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "664601302077-9rtta2j6atipg12va670ue9b2b75up2n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBw1RFALhNpHa5xgJ8P4YF4II5NWLOdBo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

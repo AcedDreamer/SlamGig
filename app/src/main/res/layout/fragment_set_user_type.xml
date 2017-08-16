@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.slamgig.android.ui.profile.fragments.SetUserTypeFragment"
+    android:padding="@dimen/space_medium">
+
+    <TextView
+        android:id="@+id/error_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/user_type_question_error_text"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:padding="@dimen/space_medium"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/space_small"
+        android:visibility="gone"
+        android:textColor="@color/colorError"/>
+
+    <TextView
+        android:id="@+id/question_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/user_type_question_text"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:padding="@dimen/space_medium"
+        android:gravity="center"
+        android:layout_below="@+id/error_text"/>
+
+    <RadioGroup
+        android:id="@+id/user_type_button_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question_text"
+        android:padding="@dimen/space_medium"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+        <RadioButton
+            android:id="@+id/entertainer_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:button="@android:color/transparent"
+            android:text="@string/entertainer"
+            android:drawableTop="@drawable/entertainer_icon"
+            android:background="@drawable/user_type_selector"
+            android:padding="@dimen/size_small"/>
+        <RadioButton
+            android:id="@+id/slammer_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:gravity="center"
+            android:button="@android:color/transparent"
+            android:drawableTop="@drawable/slammer_icon"
+            android:background="@drawable/user_type_selector"
+            android:text="@string/slammer"
+            android:padding="@dimen/size_small"
+            android:layout_marginLeft="@dimen/space_small"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/additional_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/user_type_question_additional_text"
+        android:layout_below="@+id/user_type_button_group"
+        android:padding="@dimen/space_medium"
+        android:gravity="center"/>
+
+</RelativeLayout>

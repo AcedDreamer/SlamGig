@@ -1,0 +1,90 @@
+{
+  "entertainer_type":[
+    {
+      "name": "Singer",
+      "classification" : "Genre"
+    },
+    {
+      "name": "Rapper",
+      "classification" : "Content"
+    },
+    {
+      "name": "DJ",
+      "classification" : "Genre"
+    },
+    {
+      "name": "MC",
+      "classification" : "Occasion"
+    },
+    {
+      "name": "Comedian",
+      "classification" : "Content"
+    },
+    {
+      "name": "Dancer",
+      "classification" : "Content"
+    },
+    {
+      "name": "Instrumentalist",
+      "classification" : "Genre"
+    },
+    {
+      "name": "Speaker",
+      "classification" : "Occasion"
+    },
+    {
+      "name": "Poet",
+      "classification" : "Content"
+    },
+    {
+      "name": "Actor",
+      "classification" : "Occasion"
+    },
+    {
+      "name": "Dancer",
+      "classification" : "Occasion"
+    },
+    {
+      "name": "Other"
+    }
+  ],
+  "genre":[
+    { "name" : "Rhythm & Blues" },
+    { "name" : "Hip Hop" },
+    { "name" : "Pop" },
+    { "name" : "Rap" },
+    { "name" : "Religious" },
+    { "name" : "Dance Hall" },
+    { "name" : "Jazz" },
+    { "name" : "Soul" },
+    { "name" : "Afro - Beat" },
+    { "name" : "Blues" },
+    { "name" : "Rock" },
+    { "name" : "Reggae" },
+    { "name" : "Electric" },
+    { "name" : "Dance" },
+    { "name" : "Ethnic" },
+    { "name" : "Other" }
+  ],
+  "occasion":[
+    { "name" : "Wedding" },
+    { "name" : "Christening" },
+    { "name" : "Gospel" },
+    { "name" : "Business" },
+    { "name" : "IT" },
+    { "name" : "Burial" },
+    { "name" : "Anniversary" },
+    { "name" : "Ethnic" },
+    { "name" : "Political" },
+    { "name" : "Christian" },
+    { "name" : "Islamic" },
+    { "name" : "Other" }
+  ],
+  "content":[
+    { "name" : "Christian" },
+    { "name" : "Islamic" },
+    { "name" : "Ethnic" },
+    { "name" : "Political" },
+    { "name" : "Business" }
+  ]
+}
