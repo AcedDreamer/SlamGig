@@ -11,17 +11,17 @@ import java.util.List;
 
 public class User implements Parcelable {
 
-    private String key;
-    private String email;
-    private String firstname;
-    private String lastname;
-    private String username;
-    private String avatar;
-    private String bio;
-    private List<String> userTypes;
-    private List<String> entertainerTypes;
-    private List<String> reviews;
-    private String rating;
+    public String key;
+    public String email;
+    public String firstname;
+    public String lastname;
+    public String username;
+    public String avatar;
+    public String bio;
+    public List<String> userTypes;
+    public List<String> entertainerTypes;
+    public List<String> reviews;
+    public String rating;
 
     public User(String key,String email){
         this.key = key;

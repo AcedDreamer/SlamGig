@@ -1,22 +1,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.mycardboarddreams.autocompletebubbletext.MultiSelectEditText
-        android:id="@+id/auto_text_complete"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/error_text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:padding="5dp"
-        android:background="#FFEEEEEE"/>
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorError"
+        android:text="@string/set_entertainer_type_error_message"
+        android:padding="@dimen/space_medium"
+        android:visibility="gone"/>
 
-    <!-- Layout where the list will go -->
-    <FrameLayout
-        android:id="@+id/auto_list_container"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#FF666666"/>
+        android:layout_height="match_parent"
+        android:horizontalSpacing="2dp"
+        android:numColumns="2"
+        android:verticalSpacing="2dp"
+        android:padding="@dimen/space_medium"/>
 
 </LinearLayout>

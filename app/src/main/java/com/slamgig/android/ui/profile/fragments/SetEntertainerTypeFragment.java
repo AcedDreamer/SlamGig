@@ -4,19 +4,16 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import com.mycardboarddreams.autocompletebubbletext.MultiSelectEditText;
 import com.slamgig.android.R;
 import com.slamgig.android.model.EntertainerType;
+import com.slamgig.android.ui.profile.EntertainerSelectorRecyclerViewAdapter;
 import com.slamgig.android.utilities.DataUtil;
 
 import org.json.JSONException;
@@ -36,12 +33,16 @@ public class SetEntertainerTypeFragment extends Fragment{
     ArrayList<EntertainerType> entertainerTypes = new ArrayList<>();
     ArrayList<EntertainerType> selectedEntertainerTypes = new ArrayList<>();
 
+    @BindView(R.id.error_text)
+    TextView errorMessage;
 
-//    @BindView(R.id.auto_text_complete)
-    MultiSelectEditText autoCompleteEditText;
+    @BindView(R.id.recycler_view)
+    RecyclerView recyclerView;
+
+    EntertainerSelectorRecyclerViewAdapter adapter;
 
     public SetEntertainerTypeFragment() {
-        // Required empty public constructor
+
     }
 
     public static SetEntertainerTypeFragment newInstance() {
@@ -58,39 +59,37 @@ public class SetEntertainerTypeFragment extends Fragment{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_set_entertainer_type, container, false);
-       // ButterKnife.bind(this,view);
+        ButterKnife.bind(this,view);
 
         entertainerTypes =  getEntertainerTypes();
+        adapter = new EntertainerSelectorRecyclerViewAdapter(entertainerTypes);
+        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
+        recyclerView.setAdapter(adapter);
 
-        autoCompleteEditText = (MultiSelectEditText)view.findViewById(R.id.auto_text_complete);
-        autoCompleteEditText.addAllItems(entertainerTypes);
-
-        //Pull out the ListView from the MultiSelectEditText
-        ListView list = autoCompleteEditText.getListView();
-
-        //Add it to a ViewGroup somewhere else in the layout
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-        list.setLayoutParams(params);
-
-        FrameLayout frame = (FrameLayout)view.findViewById(R.id.auto_list_container);
-        frame.addView(list);
-
-        //Set a listener on bubble clicks
-        autoCompleteEditText.setBubbleClickListener(new MultiSelectEditText.BubbleClickListener<EntertainerType>() {
-
-            @Override
-            public void onClick(EntertainerType item) {
-                Log.d(TAG, "Item: " + item.getReadableName());
-            }
-        });
+//        if (mListener != null) {
+//            mListener.onEntertainerTypesSelected(adapter.getAllChecked());
+//        }
 
         return view;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onEntertainerTypesSelected(selectedEntertainerTypes);
+    public void showErrorMessage() {
+        errorMessage.setVisibility(View.VISIBLE);
+    }
+
+    public void hideErrorMessage() {
+        errorMessage.setVisibility(View.GONE);
+    }
+
+    public ArrayList<EntertainerType> getSelectedEntertainerTypes(){
+        return adapter.getAllChecked();
+    }
+
+    @Override
+    public void onHiddenChanged(boolean hidden){
+        super.onHiddenChanged(hidden);
+        if(hidden && mListener != null) {
+            mListener.onEntertainerTypesSelected(adapter.getAllChecked());
         }
     }
 

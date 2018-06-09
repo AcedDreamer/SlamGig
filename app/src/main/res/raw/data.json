@@ -1,51 +1,51 @@
 {
   "entertainer_type":[
     {
-      "name": "Singer",
-      "classification" : "Genre"
+      "name": "singer",
+      "classification" : "genre"
     },
     {
-      "name": "Rapper",
-      "classification" : "Content"
+      "name": "rapper",
+      "classification" : "content"
     },
     {
-      "name": "DJ",
-      "classification" : "Genre"
+      "name": "dj",
+      "classification" : "genre"
     },
     {
-      "name": "MC",
-      "classification" : "Occasion"
+      "name": "mc",
+      "classification" : "occasion"
     },
     {
-      "name": "Comedian",
-      "classification" : "Content"
+      "name": "comedian",
+      "classification" : "content"
     },
     {
-      "name": "Dancer",
-      "classification" : "Content"
+      "name": "dancer",
+      "classification" : "content"
     },
     {
-      "name": "Instrumentalist",
-      "classification" : "Genre"
+      "name": "instrumentalist",
+      "classification" : "genre"
     },
     {
-      "name": "Speaker",
-      "classification" : "Occasion"
+      "name": "speaker",
+      "classification" : "occasion"
     },
     {
-      "name": "Poet",
-      "classification" : "Content"
+      "name": "poet",
+      "classification" : "content"
     },
     {
-      "name": "Actor",
-      "classification" : "Occasion"
+      "name": "actor",
+      "classification" : "occasion"
     },
     {
-      "name": "Dancer",
-      "classification" : "Occasion"
+      "name": "dancer",
+      "classification" : "occasion"
     },
     {
-      "name": "Other"
+      "name": "other"
     }
   ],
   "genre":[

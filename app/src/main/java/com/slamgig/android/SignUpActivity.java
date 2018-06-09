@@ -39,6 +39,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.slamgig.android.model.User;
+import com.slamgig.android.ui.profile.SetupProfileActivity;
 import com.slamgig.android.ui.walkthrough.WalkthroughActivity;
 
 import java.util.ArrayList;
@@ -201,11 +202,11 @@ public class SignUpActivity extends AppCompatActivity implements LoaderCallbacks
                                         Toast.LENGTH_SHORT).show();
                             } else {
 
-                                String userKey= mDatabase.push().getKey();
-                                User user = new User(userKey,email);
-                                mDatabase.child(userKey).setValue(user);
+//                                String userKey= mDatabase.push().getKey();
+//                                User user = new User(userKey,email);
+//                                mDatabase.child(userKey).setValue(user);
 
-                                startActivity(new Intent(SignUpActivity.this, WalkthroughActivity.class));
+                                startActivity(new Intent(SignUpActivity.this, SetupProfileActivity.class));
                                 finish();
                             }
                         }

@@ -29,6 +29,7 @@ public class SetupProfileActivity extends AppCompatActivity
 
     MyFragmentPagerAdapter mPagerAdapter;
     final int FRAGMENTS_LENGTH = 4;
+    private int ENTERTAINER_TYPE_FRAGMENT_INDEX = 1;
 
     @BindView(R.id.view_pager)
     ViewPager mPager;
@@ -43,6 +44,10 @@ public class SetupProfileActivity extends AppCompatActivity
             mPager.setCurrentItem(current);
         } else {
             launchProfilePage();
+        }
+
+        if(current == ++ENTERTAINER_TYPE_FRAGMENT_INDEX){
+            validateEntertainerTypes();
         }
     }
 
@@ -75,6 +80,13 @@ public class SetupProfileActivity extends AppCompatActivity
         Intent intent = new Intent(this,ProfileActivity.class);
         startActivity(intent);
     }
+
+    private void validateEntertainerTypes(ArrayList<EntertainerType> entertainerTypeArrayList){
+        if(entertainerTypeArrayList.size() == 0){
+            mPager.get
+         }
+    }
+
     private int getItem(int i) {
         return mPager.getCurrentItem() + i;
     }
